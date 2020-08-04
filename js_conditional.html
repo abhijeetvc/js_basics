@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>JS Conditional Stmts</title>
+    </head>
+
+    <body>
+        <script>
+            var date=new Date()
+            var dayOfWeek=date.getDay()
+            document.write(date+"<br>")
+            document.write(dayOfWeek+"<br>") // 0 to 6 --> Sunday to Saturday
+
+            // if(dayOfWeek==1){
+            //     document.write("It's Monday")
+            // }else if(dayOfWeek==2){
+            //     document.write("It's Tuesday")
+            // }else if(dayOfWeek==3){
+            //     document.write("It's Wednesday")
+            // }else{
+            //     document.write("It's Other Day")
+            // }
+
+            // switch(dayOfWeek){
+            //     case 0:
+            //         document.write("Sunday")
+            //         break;
+
+            //     case 1:
+            //         document.write("Monday")
+            //         break;
+
+            //     case 2:
+            //          document.write("Tuesday")
+            //          break;
+
+            //     default:
+            //          document.write("It's incorrect choice")     
+            // }
+
+            var age=17
+            var category=age<18? "Child":"Adult"
+            document.write(category)
+        </script>
+    </body>
+</html>

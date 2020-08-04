@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>JS Arrays</title>
+    </head>
+
+    <body>
+        <script>
+            var fruits=["Apple","Orange","Banana"]
+            document.write(fruits+"<br>")
+          //  document.write(fruits[0]+"<br>")
+            document.write(fruits.length+"<br>")
+
+            // for(i=0;i<fruits.length;i++){
+            //     document.write(fruits[i]+"<br>")
+            // } 
+
+            // for(var fruit of fruits){
+            //     document.write(fruit+"<br>")
+            // }   
+
+            // for(var fruit in fruits){
+            //     document.write(fruits[fruit]+"<br>")
+            // }
+
+            // fruits.push("Grapes","Mango")
+            // document.write(fruits+"<br>")
+
+            // fruits.unshift("PineApple")
+            // document.write(fruits+"<br>")
+       
+            // var lastEle=fruits.pop();
+            // document.write(lastEle+"<br>")
+            // document.write(fruits+"<br>")
+
+            var fruits1=["Mango","PineApple"]
+
+            var allFruits=fruits.concat(fruits1)
+            document.write(allFruits+"<br>")
+
+            var arr=[3,2,1,5,8,7,4,9]
+            var result=arr.find(function(ele){
+                return ele>5
+            })
+            document.write(result+"<br>")
+          //  document.write
+
+          var sortArr=fruits.sort()
+          document.write(sortArr+"<br>")
+
+          var person=[{name:"John",age:25},
+                      {name:"Peter",age:30},
+                      {name:"Ryan",age:28}
+          ]
+          person.sort(function(a,b){
+              return a.age-b.age
+          })
+          console.log(person)
+        </script>
+    </body>
+</html>
