@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>JS Objects</title>
+    </head>
+
+    <body>
+        <script>
+            var person={
+                "name":"John",
+                "age":30,
+                "city":"Mumbai",
+                displayName:function(){
+                    document.write(this.name)
+                }
+            }
+            // document.write(person.name+"<br>")
+            // document.write(person["name"])
+
+          //  var check=prompt("Enter key name: ")
+          //  alert(person[check])
+
+            // for (var key in person) {
+            //     document.write(person[key])
+            // }
+            person.country="India"
+            delete person.age
+            console.log(person)
+
+            person.displayName()
+            person["displayName"]()
+
+        </script>
+    </body>
+</html>
