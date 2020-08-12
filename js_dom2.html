@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>JS Styling</title>
+    </head>
+
+    <body>
+        <p id="pid">This is paragraph.</p>
+        <p><a href="https:www.github.com" id="gitLink">Github</a>This is another paragraph</p>
+        <p><a href="https:www.google.com" id="myLink">Google</a></p>
+        <button type="button" onclick="setStyle()" id="myBtn">Set Style</button>
+        <script>
+          function setStyle(){
+              var elem=document.getElementById("pid")
+
+              elem.style.color="blue"
+              elem.style.fontSize="20px"
+              elem.style.fontWeight="bold"
+          }
+
+          var link=document.getElementById("myLink")
+
+          var href=link.getAttribute("href")
+          document.write(href)
+
+          var btn=document.getElementById("myBtn")
+
+          btn.setAttribute("class","click-btn")
+          btn.setAttribute("disabled","")
+
+
+
+        </script>
+    </body>
+</html>

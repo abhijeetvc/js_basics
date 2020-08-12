@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS DOM</title>
+    </head>
+
+    <body>
+        <p>This is paragraph</p>
+        <div class="test">This is another paragraph.</p>
+        <p>This is again a new paragraph</p>
+        <script>
+                // document.write(document.documentElement.getAttribute("lang")+"<br>")
+                // document.body.style.background="yellow"
+
+                // document.write(document.head.firstElementChild.nodeName)
+
+               // var elem=document.getElementById("pid")
+               // var elem=document.getElementsByClassName("test")
+
+              //  elem[0].style.fontWeight="bold"
+                //elem.style.background="yellow"
+
+                var elem=document.getElementsByTagName("p")
+
+                for(var ele in elem){
+                    elem[ele].style.background="yellow"
+                }
+        </script>
+    </body>
+</html>
