@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            JS REST and Spread Operator
+        </title>
+    </head>
+
+    <body>
+        <script>
+            // function sortNames(...names){
+            //     return names.sort()
+            // }
+                
+            function MyFunction(a,b,...c){
+                return c
+            }
+         //   console.log(MyFunction("India","US","Japan","Germany"))
+            //console.log(sortNames("India","US","Japan","Germany"))
+
+            function addNumbers(a,b,c){
+                return a+b+c
+            }
+
+            let numbers=[5,10,15]
+            console.log(addNumbers(...numbers))
+
+            let fruits=["Apple","Banana","Mango"]
+            let fruits1=["Orange","PineApple"]
+
+            let allFruits=[...fruits,"Grapes",...fruits1]
+            console.log(allFruits)
+
+         //   let [a,b,c]=fruits
+            let [a,...b]=fruits
+            console.log(a)
+            console.log(b)
+          //  console.log(c)
+
+          let person={
+              name:"John",
+              age:30,
+              city:"Pune"
+          }
+
+          let {name,age,city}=person
+          console.log(name)
+          console.log(age)
+          console.log(city)
+        </script>
+    </body>
+</html>

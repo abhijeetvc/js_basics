@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>JS Json Parsing</title>
+    </head>
+
+    <body>
+        <script>
+            var employee='{"name":"John","age":30,"city":"Mumbai"}'
+            var obj=JSON.parse(employee)
+            console.log(obj.name)
+            console.log(obj.age)
+            console.log(obj.city)
+
+            var jsemp=`{
+                "emp":{
+                    "name":"Abc",
+                    "age":30,
+                    "city":["Pune","Mumbai"],
+                    "address":{
+                        "street":"s1",
+                        "area":"a1",
+                        "pincode":12345
+                    }
+                }
+            }`
+            var emp1=JSON.parse(jsemp)
+
+            console.log(emp1.emp.name)
+            console.log(emp1.emp.city[0])
+            console.log(emp1.emp.address.street)
+
+            var obj1={"name":"Abc",
+                      "city":"Mumbai"
+                    }
+
+            var json=JSON.stringify(obj1)
+            console.log(json)        
+        </script>
+    </body>
+</html>

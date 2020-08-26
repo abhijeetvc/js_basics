@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>JS Arrow Functions</title>
+    </head>
+
+    <body>
+        <script>
+            // function addNumbers(a,b){
+            //     return a+b
+            // }
+
+            // var addNumbers=function(a,b){
+            //     return a+b
+            // }
+
+            var addNumbers=(a,b)=>a+b
+            console.log(addNumbers(40,30))
+
+            // var message=function(name){
+            //     return `Hello, ${name}`
+            // }
+
+            var message=name=>console.log(name)
+            message("Peter")
+            
+            // var check=function(age){
+            //     if(age>18){
+            //         console.log("Adult")
+            //     }else{
+            //         console.log("Child")
+            //     }
+            // }
+
+            var check=age=>{
+                if(age>18){
+                    console.log("Adult")
+                }else{
+                    console.log("Child")
+                }
+            }
+            check(15)
+
+            function Employee(firstName, lastName){
+                this.firstName=firstName
+                this.lastName=lastName
+
+                this.getData=function(){
+                    return()=>{
+                        console.log(this.constructor.name)
+                        console.log(this.firstName+' '+this.lastName)
+                    }
+                }
+            }
+            let emp=new Employee("John","Doe")
+            let display=emp.getData()
+            display()
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>JS DOM Manipulation</title>
+    </head>
+
+    <body>
+        <div id="main">
+            <h1 id="hid">Hello JS</h1>
+            <p id="pid">This is paragraph</p>
+        </div>
+        <button type="button" onclick="insertElement()">Insert</button>
+    
+        <script>
+            function insertElement(){
+                var newDiv=document.createElement("div")
+                var newContent=document.createTextNode("This is new content")
+                newDiv.appendChild(newContent)
+
+                var currentDiv=document.getElementById("main")
+                document.body.appendChild(newDiv,currentDiv)
+                console.log(currentDiv.firstChild.nodeName)
+            }
+        </script>
+    </body>
+</html>

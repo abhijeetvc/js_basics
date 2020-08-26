@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>JS ES6</title>
+    </head>
+
+    <body>
+        <script>
+            //var , let ,const
+
+            //variables declared with let keyword are block scoped and they are not hoisted
+            //variables declared with var keyword are function scoped and are hoisted to the top
+
+            for(let i=0;i<5;i++){
+                console.log(i) //0,1,2,3,4
+            }
+            console.log(i) // i is not defined
+            console.log("hiiiii")
+
+            for(var i=0;i<5;i++){
+                console.log(i)  //0,1,2,3,4
+            }
+            console.log(i) //5
+
+            const PI=3.14
+            console.log(PI)
+            //PI=3
+
+            sayHello()
+            function sayHello(){
+                console.log("It's a function")
+            }
+
+            // val="Hello JS!!!"
+            // console.log(val)
+            // var val
+
+            console.log(val)
+            val="Hello!!!!"
+            var val
+            
+            //template literals
+            let a=20
+            let b=30
+            let result=`The result of ${a} and ${b} is ${a+b}`
+            document.write(result)
+
+            function checkName(name='JS'){
+                return `${name}`
+            }
+            console.log(checkName("Abhijeet"))
+        </script>
+    </body>
+</html>
