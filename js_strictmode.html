@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>JS Strict Mode</title>
+    </head>
+
+    <body>
+        <script>
+           // "use strict"
+            let x=10
+            console.log(x)
+
+            function check(){
+               // "use strict"
+                message="Hello Strict Mode"
+                console.log(message)
+            }
+            check()
+
+
+            var obj1={
+                name:"Object A",
+                check:function(...message){
+                    console.log(message+"... "+this.name)
+                }
+            }
+            obj1.check("Checking")
+
+            var obj2={
+                name:"Object B"
+            }
+
+          // obj1.check.call(obj2,"Checking Object2")
+           obj1.check.apply(obj2,["Hello","Hello1"])
+        </script>
+    </body>
+</html>

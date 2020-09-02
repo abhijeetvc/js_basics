@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>JS Promise</title>
+    </head>
+
+    <body>
+        <script>
+            //ES5 
+             var amIHappy=true
+
+             var willIGetACar=new Promise(
+                 function(resolve,reject){
+                     if(amIHappy){
+                         var car={
+                             brand: 'Audi',
+                             color: 'white'
+                         }
+                         resolve(car)
+                     }else{
+                         var reason=new Error('I am not happy')
+                         reject(reason)
+                     }
+                 }
+             )
+
+             var askCar=function(){
+                 willIGetACar
+                    .then(showOff)
+                    .then(function(fulfilled){
+                        console.log(fulfilled)
+                    })
+                    .catch(function(error){
+                        console.log(error.message)
+                    })
+             }  
+
+             var showOff=function(car){
+                 var message='hey friend I have a new'+
+                                car.color+' '+car.brand+ ' car'
+                 return Promise.resolve(message)
+             }
+
+             askCar() 
+
+        </script>
+    </body>
+</html>
